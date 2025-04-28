@@ -1,0 +1,12 @@
+.categories{
+    width: 100vw;
+}
+
+.categoriesList{
+    background-color: aliceblue;
+    color: #131415;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 5px;
+}
