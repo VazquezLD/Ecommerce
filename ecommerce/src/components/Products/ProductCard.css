@@ -1,0 +1,12 @@
+.productCard{
+    background-color: rgb(136, 110, 110);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.imagenProducto{
+    width: 20px;
+}

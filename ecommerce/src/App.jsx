@@ -1,15 +1,19 @@
 import './App.css'
 import { Categories } from './components/Categories/Categories'
 import {Navbar} from './components/Navbar/Navbar'
+import { ProductsContainer } from './components/Products/ProductsContainer'
 import { Container } from './components/SectionContainer/Container'
+import { useState } from 'react'
 
 function App() {
-
+  const [productos, setProductos] = useState([]);
   return (
     <>
-    <Navbar></Navbar>
+    <Navbar setProductos={setProductos}></Navbar>
     <Categories></Categories>
-    <Container></Container>
+    <Container>
+      <ProductsContainer productos={productos}></ProductsContainer>
+    </Container>
     </>
   )
 }

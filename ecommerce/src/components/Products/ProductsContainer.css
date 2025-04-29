@@ -1,0 +1,10 @@
+.productsContainer{
+    display: flex;
+    background-color: #c6c6c6;
+    border-radius: 20px;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+}
