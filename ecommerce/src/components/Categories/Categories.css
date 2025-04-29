@@ -13,8 +13,8 @@
 .categoriesName{
     font-weight: 600;
 }
-@media (max-width:600px) {
+@media (max-width:650px) {
     .categoriesName{
-        font-size: 10px;
+        font-size: 8px;
     }
 }

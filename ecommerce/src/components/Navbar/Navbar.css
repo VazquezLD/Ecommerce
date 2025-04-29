@@ -27,10 +27,17 @@
 }
 
 .inputProducts{
+    color: black;
     width: 15rem;
     height: 2rem;
-    border-radius: 10px;
+    border-radius: 2px;
     background-color: #c6c6c6;
     border: none;
     text-align: center;
+}
+
+@media (max-width:650px){
+    .inputProducts{
+        display: none;
+    }
 }

@@ -11,11 +11,11 @@ export const InputProduct = ( {setProductos} ) => {
         const res = await fetch('https://fakestoreapi.com/products');
         const data = await res.json();
 
-        const filtrados = data.filter((prod) =>
+        const filtradosNombre = data.filter((prod) =>
             prod.title.toLowerCase().includes(producto.toLowerCase())
           );
       
-          setProductos(filtrados);
+          setProductos(filtradosNombre);
     }
     
     return(

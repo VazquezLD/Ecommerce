@@ -1,10 +1,11 @@
 .productsContainer{
-    display: flex;
-    background-color: #c6c6c6;
-    border-radius: 20px;
+    place-items: center;
+    border-radius: 10px;
     display: grid;
-    width: 80%;
-    grid-template-columns: repeat(4, 1fr);
+    width: 98%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
