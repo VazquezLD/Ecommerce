@@ -1,17 +1,18 @@
 import React from "react";
 import './Categories.css'
+import { CategoriesName } from "./CategoriesName";
 
 export const Categories = () => {
     
     return(
         <div className="categories">
             <ul className="categoriesList">
-                <li className="categoriesName"><a href="#">NEW</a></li>
-                <li className="categoriesName"><a href="#">WOMEN CLOTHING</a></li>
-                <li className="categoriesName"><a href="#">MEN CLOTHING</a></li>
-                <li className="categoriesName"><a href="#">ELECTRONICS</a></li>
-                <li className="categoriesName"><a href="#">JEWELERY</a></li>
-                <li className="categoriesName"><a href="#">ABOUT</a></li>
+                <CategoriesName><a href="#">NEW</a></CategoriesName>
+                <CategoriesName><a href="#">WOMEN CLOTHING</a></CategoriesName>
+                <CategoriesName><a href="#">MEN CLOTHING</a></CategoriesName>
+                <CategoriesName><a href="#">ELECTRONICS</a></CategoriesName>
+                <CategoriesName><a href="#">JEWELERY</a></CategoriesName>
+                <CategoriesName><a href="#">ABOUT</a></CategoriesName>
             </ul>
         </div>
     )

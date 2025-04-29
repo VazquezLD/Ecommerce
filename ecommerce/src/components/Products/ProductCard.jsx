@@ -1,9 +1,10 @@
 import './ProductCard.css'
 import React from 'react'
 import { CiStar } from "react-icons/ci";
+import { AddCartButton } from './AddCart';
 
 export const ProductCard = ({ productos }) => {
-    console.log(productos);
+    
     return (
       <>
         {productos.map(prod => (
@@ -12,8 +13,8 @@ export const ProductCard = ({ productos }) => {
             <span className='precioProducto'>${prod.price}</span>
             <span className='tituloProducto'>{prod.title}</span>
             <div className="calificacionProducto">
-              <CiStar/>
-              <span>{prod.rating.rate}</span>
+              <span><CiStar/>{prod.rating.rate}</span>
+              <AddCartButton>Agregar al carrito</AddCartButton>
             </div>
           </div>
         ))}

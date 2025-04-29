@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 10px;
-    margin: 5px;
+    margin: 5px 0px;
 }
 .categoriesName{
     font-weight: 600;
@@ -17,4 +17,12 @@
     .categoriesName{
         font-size: 8px;
     }
+}
+.categoriesName a{
+    transition: all 0.2s ease;
+}
+.categoriesName a:focus{
+    background-color: rgba(224, 63, 0, 0.692);
+    padding: 5px;
+    border-radius: 5px;
 }
