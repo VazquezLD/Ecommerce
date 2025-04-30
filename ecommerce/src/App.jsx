@@ -6,11 +6,15 @@ import { Container } from './components/SectionContainer/Container'
 import { useState } from 'react'
 
 function App() {
+
   const [productos, setProductos] = useState([]);
+  
   return (
     <>
     <Navbar setProductos={setProductos}></Navbar>
-    <Categories></Categories>
+
+    <Categories setProductos={setProductos}></Categories>
+
     <Container>
       <ProductsContainer productos={productos}></ProductsContainer>
     </Container>
