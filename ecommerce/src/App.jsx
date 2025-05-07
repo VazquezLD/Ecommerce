@@ -6,7 +6,6 @@ import { Container } from './components/SectionContainer/Container'
 import { useState } from 'react'
 
 function App() {
-
   const [productos, setProductos] = useState([]);
   const [agregarProducto, setAgregarProducto] = useState(0)
   const [productosCarrito, setProductoCarrito] = useState([])
