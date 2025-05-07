@@ -6,19 +6,20 @@ import { Container } from './components/SectionContainer/Container'
 import { useState, useEffect } from 'react'
 
 function App() {
+  
   const [productos, setProductos] = useState([]);
-  const [agregarProducto, setAgregarProducto] = useState(0)
   const [productosCarrito, setProductoCarrito] = useState(() => {
     const guardado = localStorage.getItem('misProductos')
     return guardado ? JSON.parse(guardado) : []
   })
+  const [agregarProducto, setAgregarProducto] = useState(() => {
+    const cantidad = localStorage.getItem('misProductos')
+    return cantidad ? JSON.parse(cantidad).length : []
+  })
 
   useEffect(() => {
     localStorage.setItem('misProductos', JSON.stringify(productosCarrito))
-    
   }, [productosCarrito]);
-
-  console.log(productosCarrito)
 
   return (
     <>
