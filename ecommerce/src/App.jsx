@@ -3,12 +3,20 @@ import { Categories } from './components/Categories/Categories'
 import {Navbar} from './components/Navbar/Navbar'
 import { ProductsContainer } from './components/Products/ProductsContainer'
 import { Container } from './components/SectionContainer/Container'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [productos, setProductos] = useState([]);
   const [agregarProducto, setAgregarProducto] = useState(0)
-  const [productosCarrito, setProductoCarrito] = useState([])
+  const [productosCarrito, setProductoCarrito] = useState(() => {
+    const guardado = localStorage.getItem('misProductos')
+    return guardado ? JSON.parse(guardado) : []
+  })
+
+  useEffect(() => {
+    localStorage.setItem('misProductos', JSON.stringify(productosCarrito))
+    
+  }, [productosCarrito]);
 
   console.log(productosCarrito)
 
