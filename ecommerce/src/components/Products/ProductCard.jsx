@@ -3,8 +3,8 @@ import React from 'react'
 import { CiStar } from "react-icons/ci";
 import { AddCartButton } from './AddCart';
 
-export const ProductCard = ({ productos }) => {
-    
+export const ProductCard = ({ productos, setAgregarProducto, setProductoCarrito}) => {
+
     return (
       <>
         {productos.map(prod => (
@@ -14,7 +14,7 @@ export const ProductCard = ({ productos }) => {
             <span className='tituloProducto'>{prod.title}</span>
             <div className="calificacionProducto">
               <span><CiStar/>{prod.rating.rate}</span>
-              <AddCartButton>Agregar al carrito</AddCartButton>
+              <AddCartButton setAgregarProducto={setAgregarProducto} setProductoCarrito={setProductoCarrito} producto={prod}>Agregar al carrito</AddCartButton>
             </div>
           </div>
         ))}

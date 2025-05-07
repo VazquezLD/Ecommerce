@@ -8,7 +8,7 @@ export const Categories = ( {setProductos} ) => {
     const handleClick = (categoria) => {
         
         const fecthProductosCategoria = async () => {
-            console.log(categoria)
+            
             const res = await fetch('https://fakestoreapi.com/products');
             const data = await res.json();
     
@@ -16,9 +16,6 @@ export const Categories = ( {setProductos} ) => {
                 prod.category.includes(categoria)
               );
           
-
-            
-            console.log(categoria)
             setProductos(filtradosCategoria);
     }
     fecthProductosCategoria()

@@ -8,15 +8,25 @@ import { useState } from 'react'
 function App() {
 
   const [productos, setProductos] = useState([]);
-  
+  const [agregarProducto, setAgregarProducto] = useState(0)
+  const [productosCarrito, setProductoCarrito] = useState([])
+
+  console.log(productosCarrito)
+
   return (
     <>
-    <Navbar setProductos={setProductos}></Navbar>
+    <Navbar setProductos={setProductos} agregarProducto={agregarProducto}></Navbar>
 
     <Categories setProductos={setProductos}></Categories>
 
     <Container>
-      <ProductsContainer productos={productos}></ProductsContainer>
+
+      <ProductsContainer 
+       productos={productos}
+       setAgregarProducto={setAgregarProducto}
+       setProductoCarrito={setProductoCarrito}
+      ></ProductsContainer>
+
     </Container>
     </>
   )
