@@ -5,8 +5,8 @@ import { CategoriesName } from "./CategoriesName";
 export const Categories = ( {setProductos} ) => {
 
 
-    const handleClick = (categoria) => {
-        
+    const handleClick = (e, categoria) => {
+        e.preventDefault()
         const fecthProductosCategoria = async () => {
             
             const res = await fetch('https://fakestoreapi.com/products');
@@ -24,11 +24,11 @@ export const Categories = ( {setProductos} ) => {
     return(
         <div className="categories">
             <ul className="categoriesList">
-                <CategoriesName><a href="#" onClick={() => handleClick('')}>NEW</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={() => handleClick("women's clothing")}>WOMEN CLOTHING</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={() => handleClick("men's clothing")}>MEN CLOTHING</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={() => handleClick("electronics")}>ELECTRONICS</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={() => handleClick("jewelery")}>JEWELERY</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, '')}>NEW</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "women's clothing")}>WOMEN CLOTHING</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "men's clothing")}>MEN CLOTHING</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "electronics")}>ELECTRONICS</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "jewelery")}>JEWELERY</a></CategoriesName>
                 <CategoriesName><a href="#">ABOUT</a></CategoriesName>
             </ul>
         </div>

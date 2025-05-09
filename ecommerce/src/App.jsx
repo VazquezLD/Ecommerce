@@ -6,6 +6,7 @@ import { Container } from './components/SectionContainer/Container'
 import { useState, useEffect } from 'react'
 import { Footer } from './components/Footer/Footer'
 import { ReasonsContainer } from './components/Reasons/ReasonsContainer'
+import { Hero } from './components/Hero/Hero'
 
 function App() {
   
@@ -39,6 +40,7 @@ useEffect(() => {
     <>
     <Navbar setProductos={setProductos} agregarProducto={agregarProducto}></Navbar>
     
+    <Hero>a</Hero>
     <Categories setProductos={setProductos}></Categories>
     <Container>
 

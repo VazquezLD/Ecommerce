@@ -6,6 +6,8 @@
     padding: 0px 10px;
     top: 0;
     color: #131415;
+    position: fixed;
+    width: 100vw;
 }
 
 .navbarLinks{

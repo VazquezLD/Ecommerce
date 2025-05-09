@@ -1,4 +1,5 @@
 .categories{
+    
     width: 100vw;
 }
 
@@ -7,8 +8,9 @@
     color: #131415;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
-    margin: 5px 0px;
+    padding: 20px;
+    border: 1px solid rgb(240, 233, 220);
+    margin: 0;
 }
 .categoriesName{
     font-weight: 600;

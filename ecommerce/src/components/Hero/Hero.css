@@ -1,0 +1,10 @@
+.heroSection{
+    width: 100vw;
+    height: 600px;
+    background-color: red;
+    background-image: url('../../assets/heroImg.jpg');
+    background-position: center;
+    background-size: cover;      
+    background-position: center;    
+    background-repeat: no-repeat;
+}
