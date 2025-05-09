@@ -1,0 +1,37 @@
+.footerSection{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #3d3d3d;
+    flex-wrap: wrap;
+}
+
+.footerList{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footerList li{
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.icono{
+    font-size: 30px;
+    margin: 5px;
+}
+
+.fLinks{
+    font-size: 20px;
+    text-decoration:underline;
+}
+
+@media (max-width:850px){
+    .fLinks{
+        font-size: 15px;
+    }
+
+}

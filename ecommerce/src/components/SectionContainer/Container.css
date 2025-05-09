@@ -1,11 +1,11 @@
 .Container{
-    background-color: aliceblue;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex:1;
     margin: 0;
     padding: 1rem;
-    box-sizing: border-box;
+    box-sizing: border-box;   
     
 }

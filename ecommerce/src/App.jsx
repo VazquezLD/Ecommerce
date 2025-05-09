@@ -4,6 +4,8 @@ import {Navbar} from './components/Navbar/Navbar'
 import { ProductsContainer } from './components/Products/ProductsContainer'
 import { Container } from './components/SectionContainer/Container'
 import { useState, useEffect } from 'react'
+import { Footer } from './components/Footer/Footer'
+import { ReasonsContainer } from './components/Reasons/ReasonsContainer'
 
 function App() {
   
@@ -17,6 +19,18 @@ function App() {
     return cantidad ? JSON.parse(cantidad).length : []
   })
 
+  const fecthProductosInicio = async () => {
+        
+    const res = await fetch('https://fakestoreapi.com/products');
+    const data = await res.json();
+    
+    setProductos(data);
+}
+
+useEffect(() => {
+  fecthProductosInicio()
+},[])
+
   useEffect(() => {
     localStorage.setItem('misProductos', JSON.stringify(productosCarrito))
   }, [productosCarrito]);
@@ -24,18 +38,19 @@ function App() {
   return (
     <>
     <Navbar setProductos={setProductos} agregarProducto={agregarProducto}></Navbar>
-
+    
     <Categories setProductos={setProductos}></Categories>
-
     <Container>
 
       <ProductsContainer 
        productos={productos}
        setAgregarProducto={setAgregarProducto}
        setProductoCarrito={setProductoCarrito}
-      ></ProductsContainer>
-
+      >
+      </ProductsContainer>
     </Container>
+    <ReasonsContainer/>
+    <Footer/>
     </>
   )
 }
