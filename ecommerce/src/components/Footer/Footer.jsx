@@ -8,7 +8,7 @@ import { SiMercadopago } from "react-icons/si";
 
 export const Footer = () => {
     return(
-        <footer className="footerSection">
+        <footer className="footerSection" id="footer">
             <FooterList>
                 <li className="fLinks">Sucursales</li>
                 <li className="fLinks">Nuestro equipo</li>

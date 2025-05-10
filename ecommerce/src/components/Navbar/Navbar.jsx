@@ -5,12 +5,12 @@ import { CiSearch } from 'react-icons/ci';
 import { CiShoppingCart } from "react-icons/ci";
 import { InputProduct } from "./InputProduct";
 
-export const Navbar = ( {setProductos, agregarProducto} ) => {
+export const Navbar = ( {setProductos, agregarProducto, productos} ) => {
 
     return(
         <header className="navbar">
             <span className="navbarSpan">SHOPPING</span>
-            <InputProduct setProductos={setProductos}/>
+            <InputProduct setProductos={setProductos} productos={productos}/>
             <ul className="navbarLinks">
                 <li className="navbarLink"><a href="#"><CiSearch/></a></li>
                 

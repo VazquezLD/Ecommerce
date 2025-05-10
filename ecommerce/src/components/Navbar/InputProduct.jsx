@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
-
-export const InputProduct = ( {setProductos} ) => {
+export const InputProduct = ( {setProductos, productos} ) => {
     
     const [producto, setProducto] = useState("")
+    const [copia, setCopia] = useState([])
 
-    const fecthProductos = async (e) => {
+    useEffect(() => {
+        if (productos.length && copia.length === 0) {
+            setCopia(productos)};
+    },[productos])
+
+    
+    const filtrarProductos = (e) => {
         e.preventDefault();
-        const res = await fetch('https://fakestoreapi.com/products');
-        const data = await res.json();
-
-        const filtradosNombre = data.filter((prod) =>
+        const filtradosNombre = copia.filter((prod) =>
             prod.title.toLowerCase().includes(producto.toLowerCase())
-          );
-      
-          setProductos(filtradosNombre);
+        );
+        setProductos(filtradosNombre)
     }
     
     return(
-        <form onSubmit={fecthProductos}>
+        <form onSubmit={filtrarProductos}>
             <input type="text"
             placeholder="Buscar productos"
             className="inputProducts"

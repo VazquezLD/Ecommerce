@@ -21,10 +21,8 @@ function App() {
   })
 
   const fecthProductosInicio = async () => {
-        
     const res = await fetch('https://fakestoreapi.com/products');
     const data = await res.json();
-    
     setProductos(data);
 }
 
@@ -38,10 +36,10 @@ useEffect(() => {
 
   return (
     <>
-    <Navbar setProductos={setProductos} agregarProducto={agregarProducto}></Navbar>
+    <Navbar setProductos={setProductos} agregarProducto={agregarProducto} productos={productos}></Navbar>
     
-    <Hero>a</Hero>
-    <Categories setProductos={setProductos}></Categories>
+    <Hero></Hero>
+    <Categories setProductos={setProductos} productos={productos}></Categories>
     <Container>
 
       <ProductsContainer 
