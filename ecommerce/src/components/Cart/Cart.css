@@ -1,0 +1,65 @@
+.cartContainer{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.473);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.cartProducts{
+    height: 100%;
+    width: 25%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid black;
+    justify-content: center;
+}
+
+.productContainer{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.yourProducts{
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+}
+.totalsContainer{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    border-top: 1px solid grey;
+    justify-content: space-around;
+}
+
+.totals{
+    color: black;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.closeButton{
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: rgb(224, 63, 0);
+    font-weight: 800;
+}
