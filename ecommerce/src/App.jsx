@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react'
 import { Footer } from './components/Footer/Footer'
 import { ReasonsContainer } from './components/Reasons/ReasonsContainer'
 import { Hero } from './components/Hero/Hero'
+import { LinkContainer } from './components/LinkContainer/LinkContainer'
+import { LinkBox } from './components/LinkContainer/Link'
 
 function App() {
   
@@ -16,6 +18,7 @@ function App() {
     return guardado ? JSON.parse(guardado) : []
   })
   const [agregarProducto, setAgregarProducto] = useState(() => {
+    
     const cantidad = localStorage.getItem('misProductos')
     return cantidad ? JSON.parse(cantidad).length : []
   })
@@ -39,6 +42,7 @@ useEffect(() => {
     <Navbar setProductos={setProductos} agregarProducto={agregarProducto} productos={productos}></Navbar>
     
     <Hero></Hero>
+    <LinkContainer></LinkContainer>
     <Categories setProductos={setProductos} productos={productos}></Categories>
     <Container>
 
