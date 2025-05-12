@@ -9,11 +9,10 @@ import { ReasonsContainer } from './components/Reasons/ReasonsContainer'
 import { Hero } from './components/Hero/Hero'
 import { LinkContainer } from './components/LinkContainer/LinkContainer'
 import { Cart } from './components/Cart/Cart'
-import { CartProducts } from './components/Cart/CartProducts'
+
 
 function App() {
   
-  const [total, setTotal] = useState(0)
   const [productos, setProductos] = useState([]);
   const [productosCarrito, setProductoCarrito] = useState(() => {
     const guardado = localStorage.getItem('misProductos')
@@ -41,7 +40,7 @@ useEffect(() => {
 
   return (
     <>
-    <Cart total={total}></Cart>
+    <Cart productosCarrito={productosCarrito}></Cart>
     <Navbar setProductos={setProductos} agregarProducto={agregarProducto} productos={productos}></Navbar>
     
     <Hero></Hero>

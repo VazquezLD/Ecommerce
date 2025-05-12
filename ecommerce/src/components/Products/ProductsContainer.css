@@ -4,7 +4,7 @@
     display: grid;
     width: 98%;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 1rem;
     flex-wrap: wrap;
     justify-content: center;

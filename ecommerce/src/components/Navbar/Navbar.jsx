@@ -7,6 +7,12 @@ import { InputProduct } from "./InputProduct";
 
 export const Navbar = ( {setProductos, agregarProducto, productos} ) => {
 
+    const cart = document.getElementById('carrito')
+    const mostrarCarrito = () => {
+        cart.classList.remove('oculto')
+    }
+
+
     return(
         <header className="navbar">
             <span className="navbarSpan">SHOPPING</span>
@@ -16,7 +22,7 @@ export const Navbar = ( {setProductos, agregarProducto, productos} ) => {
                 
                 <li className="navbarLink">
                     <div className="cart-container">
-                    <i className="cart-icon"><CiShoppingCart/></i>
+                    <i className="cart-icon" onClick={mostrarCarrito}><CiShoppingCart/></i>
                     <span className="cart-count">{agregarProducto}</span>
                     </div>
                 </li>

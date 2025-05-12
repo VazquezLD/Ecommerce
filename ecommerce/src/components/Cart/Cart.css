@@ -15,30 +15,33 @@
 
 .cartProducts{
     height: 100%;
-    width: 25%;
+    width: 30%;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 2px solid black;
-    justify-content: center;
 }
 
 .productContainer{
+    flex: 1;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     width: 90%;
     height: 80%;
-    border-radius: 5px;
     align-items: center;
-    justify-content: center;
-    
+    padding: 10px;
+    overflow-x: hidden;
+    gap: 5px;
 }
 .yourProducts{
     color: black;
+    height: 10%;
     font-size: 25px;
     font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .totalsContainer{
     display: flex;
@@ -46,14 +49,13 @@
     height: 10%;
     width: 100%;
     align-items: center;
-    border-top: 1px solid grey;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .totals{
     color: black;
     font-weight: 800;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .closeButton{
@@ -62,4 +64,58 @@
     border-radius: 10px;
     background-color: rgb(224, 63, 0);
     font-weight: 800;
+}
+
+.productCart{
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 180px;
+    color:black;
+}
+
+.tituloProductoCart{
+    max-width: 90%;
+    min-height: 100%;
+}
+
+.imagenProductoCart{
+    height: 50%;
+    margin-left: 20px;
+}
+
+.descContainer{
+    gap: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.precioProductoCart{
+    font-weight: 900;
+}
+
+.oculto{
+    opacity: 0;
+    z-index: -1;
+}
+
+@media (max-width:1300px) {
+    .cartProducts{
+        width: 100%;
+    }
+    .productCart{
+        justify-content: center;
+        width: 80%;
+    }
+    .descContainer{
+        width: 50%;
+    }
 }
