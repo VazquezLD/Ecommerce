@@ -1,8 +1,33 @@
-# React + Vite
+# 🛒 Simulación de E-commerce con FakeStore API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una simulación de una tienda online desarrollada con **React.js**, **CSS** y **HTML**, utilizando datos reales provistos por la [FakeStore API](https://fakestoreapi.com/).
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Visualización de productos con imágenes, títulos, descripciones y precios.
+- 🔍 **Búsqueda de productos** por nombre.
+- 📂 **Filtrado por categoría** (como ropa, electrónica, joyería, etc.).
+- 🛍️ **Carrito de compras funcional**, con:
+  - Agregar y quitar productos.
+  - Visualización de cantidades.
+  - Totalizador de precio.
+  - Persistencia del estado del carrito mientras se navega.
+
+## 🛠️ Tecnologías utilizadas
+
+- [React.js](https://react.dev/)
+- HTML5
+- CSS3
+- [FakeStore API](https://fakestoreapi.com/)
+
+## 📦 Instalación y ejecución
+
+Cloná el repositorio y seguí estos pasos:
+
+```bash
+# Instalación de dependencias
+npm install
+
+# Inicio del servidor de desarrollo
+npm run dev
+
