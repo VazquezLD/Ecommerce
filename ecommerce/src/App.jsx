@@ -23,7 +23,7 @@ function App() {
   const [agregarProducto, setAgregarProducto] = useState(() => {
     
     const cantidad = localStorage.getItem('misProductos')
-    return cantidad ? JSON.parse(cantidad).length : []
+    return cantidad ? JSON.parse(cantidad).length : 0
   })
 
   const fecthProductosInicio = async () => {
