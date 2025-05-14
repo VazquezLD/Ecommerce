@@ -39,6 +39,7 @@
 }
 .addCart{
     background-color: rgb(224, 64, 0);
+    color: white;
     padding: 8px 9px;
     border: none;
     cursor: pointer;
