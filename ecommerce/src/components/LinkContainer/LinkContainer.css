@@ -14,11 +14,15 @@
     align-items: center;
     justify-content: space-evenly;
     min-width: 22%;
-    height: 40%;
-    border: 1px solid rgb(192, 191, 191);
+    height: 30%;
+    border: 1px solid rgba(192, 191, 191, 0.438);
     border-radius: 10px;
     text-align: center;
     padding: 10px;
+    transition: all 0.5s ease;
+}
+.linkBox:hover{
+    background-color: rgba(224, 63, 0, 0.274);
 }
 
 .iconoLink{

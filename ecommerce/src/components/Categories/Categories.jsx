@@ -30,12 +30,12 @@ export const Categories = ( {setProductos, productos} ) => {
     return(
         <div className="categories">
             <ul className="categoriesList">
-                <CategoriesName><a href="#" onClick={(e) => handleClick(e, 'new')}>Nuevo</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "women's clothing")}>Mujer</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "men's clothing")}>Hombre</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "electronics")}>Electronica</a></CategoriesName>
-                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "jewelery")}>Joyería</a></CategoriesName>
-                <CategoriesName><a href="#footer">Acerca</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, 'new')}>NUEVO</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "women's clothing")}>MUJER</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "men's clothing")}>HOMBRE</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "electronics")}>ELECTRÓNICA</a></CategoriesName>
+                <CategoriesName><a href="#" onClick={(e) => handleClick(e, "jewelery")}>JOYERÍA</a></CategoriesName>
+                <CategoriesName><a href="#footer">ACERCA</a></CategoriesName>
             </ul>
         </div>
     )

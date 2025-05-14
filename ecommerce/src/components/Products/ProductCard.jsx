@@ -3,6 +3,7 @@ import React from 'react'
 import { CiStar } from "react-icons/ci";
 import { AddCartButton } from './AddCart';
 
+
 export const ProductCard = ({ productos, setAgregarProducto, setProductoCarrito}) => {
 
     return (

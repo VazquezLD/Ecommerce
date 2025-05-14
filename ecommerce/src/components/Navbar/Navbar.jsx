@@ -15,10 +15,10 @@ export const Navbar = ( {setProductos, agregarProducto, productos} ) => {
 
     return(
         <header className="navbar">
-            <span className="navbarSpan">SHOPPING</span>
+            <span className="navbarSpan">ShoppingApp</span>
             <InputProduct setProductos={setProductos} productos={productos}/>
             <ul className="navbarLinks">
-                <li className="navbarLink"><a href="#"><CiSearch/></a></li>
+                
                 
                 <li className="navbarLink">
                     <div className="cart-container">
@@ -26,7 +26,7 @@ export const Navbar = ( {setProductos, agregarProducto, productos} ) => {
                     <span className="cart-count">{agregarProducto}</span>
                     </div>
                 </li>
-                <li className="navbarLink"><a href="#"><CiMenuBurger/></a></li>
+                
             </ul>
         </header>
     )
