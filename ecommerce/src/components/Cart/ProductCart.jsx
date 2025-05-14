@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import './Cart.css'
 import { FaMinus,FaPlus } from "react-icons/fa";
 
-export const ProductCart = ({productosCarrito}) => {
+export const ProductCart = ({productosCarrito, setProductoCarrito, setAgregarProducto}) => {
 
   const productosUnicos = productosCarrito.filter(
       (producto, index, self) => index === self.findIndex(p => p.id === producto.id)
@@ -22,19 +22,28 @@ export const ProductCart = ({productosCarrito}) => {
       setCantidades(nuevasCantidades);
      }, [productosCarrito]);
 
-    const sumarElemento = (id) => {
+    const sumarElemento = (prod, productosCarrito) => {
       setCantidades(prev => ({
-        ...prev,
-        [id]: prev[id] + 1
-      })
-    )
+        ...prev, [prod.id]: prev[prod.id] + 1}))
+        productosCarrito = (productosCarrito => [...productosCarrito, prod])
+        
+        setAgregarProducto(prevCount => prevCount + 1)
+        setProductoCarrito(productosCarrito)
+        
     }
-    const restarElemento = (id) => {
-  setCantidades(prev => ({
-        ...prev,
-        [id]: Math.max(prev[id] - 1, 0)
-      })
-    )
+
+    const restarElemento = (prod, productosCarrito) => {
+        setCantidades(prev => ({
+        ...prev, [prod.id]: Math.max(prev[prod.id] - 1, 0)}))
+        
+          const indice = productosCarrito.findIndex(p => p.id == prod.id)
+          if (indice !== -1) {
+            productosCarrito.splice(indice, 1);
+          }
+        
+        setAgregarProducto(prevCount => prevCount - 1)
+        setProductoCarrito([...productosCarrito])
+        
     }
 
     return (
@@ -46,9 +55,9 @@ export const ProductCart = ({productosCarrito}) => {
                 <span className='tituloProductoCart'>{prod.title}</span>
                 <span className='precioProductoCart'>${prod.price}</span>
                 <div className="buttonsContainer">
-                    <FaMinus className="buttonAction" id="minus" onClick={() => restarElemento(prod.id)}></FaMinus>
+                    <FaMinus className="buttonAction" id="minus" onClick={() => restarElemento(prod, productosCarrito)}></FaMinus>
                     <span className="cantProd">{cantidades[prod.id] || 0}</span>
-                    <FaPlus className="buttonAction" id="plus" onClick={() => sumarElemento(prod.id)}></FaPlus>
+                    <FaPlus className="buttonAction" id="plus" onClick={() => sumarElemento(prod, productosCarrito)}></FaPlus>
                 </div>
                 </div>
               </div>

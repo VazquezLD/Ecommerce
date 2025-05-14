@@ -14,10 +14,12 @@ import { Cart } from './components/Cart/Cart'
 function App() {
   
   const [productos, setProductos] = useState([]);
+
   const [productosCarrito, setProductoCarrito] = useState(() => {
     const guardado = localStorage.getItem('misProductos')
     return guardado ? JSON.parse(guardado) : []
   })
+
   const [agregarProducto, setAgregarProducto] = useState(() => {
     
     const cantidad = localStorage.getItem('misProductos')
@@ -40,7 +42,7 @@ useEffect(() => {
 
   return (
     <>
-    <Cart productosCarrito={productosCarrito}></Cart>
+    <Cart productosCarrito={productosCarrito} setProductoCarrito={setProductoCarrito} setAgregarProducto={setAgregarProducto}></Cart>
     <Navbar setProductos={setProductos} agregarProducto={agregarProducto} productos={productos}></Navbar>
     
     <Hero></Hero>

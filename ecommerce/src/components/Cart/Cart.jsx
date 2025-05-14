@@ -5,7 +5,7 @@ import { ProductContainer } from "./ProductContainer";
 import { Totals } from "./Totals";
 import { ProductCart } from "./ProductCart";
 
-export const Cart = ( {productosCarrito} ) => {
+export const Cart = ( {productosCarrito, setProductoCarrito, setAgregarProducto} ) => {
     
     const [total, setTotal] = useState(0)
 
@@ -18,7 +18,7 @@ export const Cart = ( {productosCarrito} ) => {
         <div className="cartContainer oculto" id="carrito">
             <CartProducts>
                 <ProductContainer>
-                    <ProductCart productosCarrito={productosCarrito}></ProductCart>
+                    <ProductCart productosCarrito={productosCarrito} setProductoCarrito={setProductoCarrito} setAgregarProducto={setAgregarProducto}></ProductCart>
                 </ProductContainer>
                 <Totals total={total}></Totals>
             </CartProducts>

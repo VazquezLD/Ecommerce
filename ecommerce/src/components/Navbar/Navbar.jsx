@@ -21,10 +21,12 @@ export const Navbar = ( {setProductos, agregarProducto, productos} ) => {
                 
                 
                 <li className="navbarLink">
+                    <a href="#productsContainer"><CiSearch/></a>
                     <div className="cart-container">
                     <i className="cart-icon" onClick={mostrarCarrito}><CiShoppingCart/></i>
                     <span className="cart-count">{agregarProducto}</span>
                     </div>
+                    <a href="#" className="menu"><CiMenuBurger/></a>
                 </li>
                 
             </ul>

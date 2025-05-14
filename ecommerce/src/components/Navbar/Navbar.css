@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0px 10px;
+    
     top: 0;
     color: #131415;
     width: 100vw;
@@ -21,6 +21,12 @@
 .navbarSpan{
     font-weight: 900;
     font-size: 25px;
+}
+.navbarLink{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
 }
 
 .inputProducts{
@@ -45,7 +51,7 @@
     right: -8px;
     background: red;
     color: white;
-    padding: 3px 3px;
+    padding: 3px 5px;
     border-radius: 50%;
     font-size: 15px;
     font-weight: bold;
@@ -62,10 +68,21 @@
     }
     .navbar span{
         font-size: 15px;
+        justify-content: center;
     }
-
+    .menu{
+        display: none;
+    }
+    .navbarLinks{
+        padding: 0;
+        margin-right: 20px;
+    }
 }
 
 .cart-icon{
     cursor: pointer;
+}
+
+.carrito{
+    font-style: 10px;
 }
